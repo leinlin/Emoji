@@ -94,7 +94,6 @@ public class TestFont : MonoBehaviour
     void DrawText(List<Vector3> vertices, List<int> triangles, List<Vector2> uv, List<Color> colorList, Color color, Vector3 offset, int index) {
 
         Vector3 pos = Vector3.zero - offset;
-        font.RequestCharactersInTexture(str, fontSize);
         for (int i = 0; i < str.Length; i++)
         {
             // Get character rendering information from the font
