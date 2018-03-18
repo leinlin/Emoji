@@ -47,7 +47,6 @@ public class MikuSprite : MonoBehaviour {
     private MeshFilter meshFilter;
     private MeshRenderer meshRenderer;
 
-    Rect m_innerUV = new Rect();
     Rect m_outerUV = new Rect();
     const int maxIndexBufferCache = 10;
     static List<int[]> mCache = new List<int[]>(maxIndexBufferCache);
@@ -167,13 +166,8 @@ public class MikuSprite : MonoBehaviour {
 
     private void CalUV() {
         Rect outer = new Rect(m_sprite.x, m_sprite.y, m_sprite.width, m_sprite.height);
-        Rect inner = new Rect(m_sprite.x + m_sprite.borderLeft, m_sprite.y + m_sprite.borderTop,
-            m_sprite.width - m_sprite.borderLeft - m_sprite.borderRight,
-            m_sprite.height - m_sprite.borderBottom - m_sprite.borderTop);
-
         Texture tex = atlas.spriteMaterial.mainTexture;
         m_outerUV = MikuSpriteData.ConvertToTexCoords(outer, tex.width, tex.height);
-        m_innerUV = MikuSpriteData.ConvertToTexCoords(inner, tex.width, tex.height);
     }
 
 }

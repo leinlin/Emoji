@@ -73,17 +73,17 @@ public class TestFont : MonoBehaviour
         List<Color> color = new List<Color>();
 
         //这里是描边
-        DrawText(vertices, triangles, uv, color, outColor, new Vector3(outWidth,0,0), 0);
-        DrawText(vertices, triangles, uv, color, outColor, new Vector3(-outWidth,0,0), 1);
+        DrawText(vertices, triangles, uv, color, outColor, new Vector3(outWidth, 0, 0), 0);
+        DrawText(vertices, triangles, uv, color, outColor, new Vector3(-outWidth, 0, 0), 1);
         DrawText(vertices, triangles, uv, color, outColor, new Vector3(0, outWidth, 0), 2);
         DrawText(vertices, triangles, uv, color, outColor, new Vector3(0, -outWidth, 0), 3);
-        DrawText(vertices, triangles, uv, color, outColor, new Vector3(outWidth, outWidth, 0), 4);
-        DrawText(vertices, triangles, uv, color, outColor, new Vector3(outWidth, -outWidth, 0), 5);
-        DrawText(vertices, triangles, uv, color, outColor, new Vector3(-outWidth, outWidth, 0), 6);
-        DrawText(vertices, triangles, uv, color, outColor, new Vector3(-outWidth, -outWidth, 0), 7);
+        DrawText(vertices, triangles, uv, color, outColor, new Vector3(outWidth, outWidth, 0), 0);
+        DrawText(vertices, triangles, uv, color, outColor, new Vector3(outWidth, -outWidth, 0), 1);
+        DrawText(vertices, triangles, uv, color, outColor, new Vector3(-outWidth, outWidth, 0), 2);
+        DrawText(vertices, triangles, uv, color, outColor, new Vector3(-outWidth, -outWidth, 0), 3);
 
         //这里是真正的字
-        DrawText(vertices, triangles, uv, color, fontColor, Vector3.zero, 8);
+        DrawText(vertices, triangles, uv, color, fontColor, Vector3.zero, 4);
 
         mesh.vertices = vertices.ToArray();
         mesh.triangles = triangles.ToArray();
